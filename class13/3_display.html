@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+</head>
+<style>
+    .block,
+    .inline,
+    .inline_block {
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+
+    /* template starts from here */
+    .block {
+        /* height, width, p,m,border */
+        background-color: lightblue;
+        display:block;
+        padding: 10px 20px;
+        width: 100px;
+        height: 50px;
+        margin-bottom: 10px;
+        border: 2px solid rgb(189, 0, 0);
+        border-radius: 50px;
+        
+
+    }
+
+    .inline {
+        background-color: lightgreen;
+        display:inline;
+        /* height: 500px; */
+        margin-left: 100px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 50px;
+    }
+
+    .inline_block {
+        background-color: mediumorchid; 
+        display:inline-block; 
+        padding: 2px 5px;
+        width: 100px;
+        height: 50px;
+        margin-right:10px;
+        border: 2px solid rgb(189, 0, 0);
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <h2>Display Property</h2>
+    <div class="block">Block</div>
+    <div class="block">Block</div>
+    <div class="inline">Inline</div>
+    <div class="inline">Inline</div>
+    <div class="inline_block">Inline Block</div>
+    <div class="inline">Inline</div>
+
+</body>
+
+</html>
+
+
+<!--  
+BLOCK ELEMENT :
+make new line every time
+            padding : works
+            width : works
+            height : works
+            margin : works
+            border : works
+
+
+INLINE EMLEMENT :
+in same line 
+        padding : works
+        width : not works
+        height : not works
+        margin : works(only horizontal)
+        border : works
+
+
+INLINE BLOCK ELEMENT :
+in same line
+        padding : works
+        width : works
+        height : works
+        margin : works
+        border : works
+-->

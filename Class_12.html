@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute and Relative Position</title>
+    <style>
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        h2{
+            text-align: center;
+            font-size: x-large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .parent {
+            margin-left: 1rem;
+            background-color: rgb(146, 85, 202);
+            width: 90vw;
+            position: relative;
+
+        }
+        .box{
+            width: 10rem;
+            height: 10rem;
+            margin-bottom: 1rem;
+
+        }
+        .box-1{
+            background-color: aqua;
+        }
+        .box-2{
+            background-color: rgb(248, 0, 186);
+            position:relative;
+            left: 10rem;
+            top:10rem;
+        }
+        .box-3{
+            background-color: yellow;
+            position:absolute;
+            left: 4rem;
+            top:6rem;
+        }
+        .box-4{
+            background-color: crimson;
+        }
+        :root{
+            --primary : red;
+            --back : yellow;
+            --font : 16px;
+            --family : sans-serif;
+            --radius : 10px;
+            --size : 50px;
+            --spacing: 10px;
+        }
+        h1{
+            background-color: var(--back);
+            font-size: var(--font);
+        }
+        p{
+            font-family: var(--family);
+            color: var(--primary);
+        }
+        button{
+            font-size: var(--size);
+            border-radius: var(--radius);
+            background-color: var(--back);
+            color: blue;
+            padding: var(--spacing);
+            border: black;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>position Normal flow</h2>
+    <div class="parent">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+    </div>
+
+    <section>
+        <br>
+        <h1>variable</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At corporis suscipit beatae. Odio, debitis voluptatibus. Deleniti officia nemo voluptatum rerum quia provident enim consequatur quod repellendus, minima facilis dicta voluptatem corporis explicabo consectetur magnam deserunt eum sunt sed. Delectus incidunt ex, tempore aliquam maiores deserunt praesentium animi, suscipit at odit nam fugit eius sapiente magnam excepturi mollitia impedit? Animi architecto culpa numquam consequuntur commodi. Ab minus perferendis velit earum possimus. Dolores maxime ab esse animi ullam. Rerum alias quas numquam, sed fuga dolor eius ea reprehenderit maxime pariatur molestias vero perspiciatis saepe, molestiae voluptatem neque mollitia sint. Nihil eum maiores similique ea quae placeat expedita non adipisci magni pariatur. Incidunt, voluptas deleniti nisi delectus labore eligendi eaque corrupti esse reprehenderit. Earum numquam saepe quis, ab provident autem dolore quod. Magni numquam fuga corrupti, voluptatibus modi nemo possimus qui, rem, explicabo ab deleniti optio et? Mollitia illum voluptates eos minus ex laudantium rerum autem soluta dolore deleniti incidunt, architecto, porro enim esse accusamus fuga tempora odio est sed quidem eligendi. Qui nisi quis quos earum eum magnam ea, nam provident inventore quibusdam delectus, quaerat voluptatibus harum fugit rerum tempore ipsa et! Porro dolorem eum quidem facilis culpa ut nostrum sunt dicta!</p>
+        <br>
+        
+        <button style="margin-top: 100px;">
+            Click me 
+        </button>
+    </section>
+</body>
+</html>
