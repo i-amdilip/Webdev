@@ -17,86 +17,70 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            animation-name: bigbox-mover;
-            animation-iteration-count: infinite;
-            animation-duration: 5s;
-            animation-direction: alternate;
         }
 
         .container {
             height: 500px;
             width: 500px;
             background-color: slategray;
+            animation-name: rotate-parent;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+
         }
 
         .box {
             height: 100px;
             width: 100px;
             background-color: hotpink;
-            /* link the animation */
+            border: 3px solid black;
+
             animation-name: box-mover;
             animation-duration: 5s;
-            animation-iteration-count: infinite;
-        /* after each iteration which direction your animation should  */
-            /* if animation iteration is not inifinte -> where you want your animation to end */
-            animation-fill-mode: forwards;
-        /* speed of animation */
             
             animation-direction: alternate;
-            border-radius: 100%;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            
         }
 
-        /* define the animation */
         @keyframes box-mover {
-            20% {
-                transform: translateX(400px);
-            }
-
-            50% {
-                transform: translate(400px, 400px);
-                border-radius: 50%;
-            }
-
-            75% {
-                transform: translate(400px, 400px);
-            }
-
-            100% {
-                background-color: blue;
+            33% {
                 transform: translateY(400px);
-
-
+            }
+            66% {
+                transform: translate(400px, 400px);
+            }
+            50%{
+                border-radius:50% ;
+            }
+            100%{
+                transform: translate(400px, 0px)
             }
         }
-        @keyframes bigbox-mover {
-            20% {
-                transform: rotate(90deg);
+
+        @keyframes rotate-parent {
+            50%{
+                background-color: white;
             }
 
-            50% {
-                transform:rotate(180deg);
-                border-radius: 50%;
+            100%{
+                transform: rotate(-360deg);
             }
-
-            75% {
-                transform: rotate(270deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-
         }
+
     </style>
 </head>
 
 <body>
-
-
-    <div class="container">
-        <div class="box"></div>
+    <div class="container-parent">
+        <div class="container">
+            <div class="box"></div>
+        </div>
     </div>
-
 
 </body>
 
