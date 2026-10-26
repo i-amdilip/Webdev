@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowling Crew</title>
+
+    <style>
+        .container {
+            height: 500px;
+            width: 100%;
+            background-color: rgb(239, 253, 113);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ball {
+            display: flex;
+            position: absolute;
+            align-items: end;
+            height: 100%;
+            animation: throw 1s linear forwards,
+                       hideBall 1ms linear 1s forwards;
+            z-index: 2;
+        }
+
+        .hitpins {
+            display: flex;
+            position: absolute;
+            align-items: end;
+            justify-content: end;
+            height: 100%;
+            width: 100%;
+            padding-right: 20px;
+            box-sizing: border-box;
+            animation: hidePins 10ms linear 1s forwards;
+            z-index: 1;
+        }
+
+        .collide {
+            display: flex;
+            position: absolute;
+            align-items: end;
+            justify-content: end;
+            height: 100%;
+            width: 100%;
+            padding-right: 18px;
+            box-sizing: border-box;
+            opacity: 0;
+            animation: collision 0.5s linear 1s forwards;
+            z-index: 3;
+        }
+
+        @keyframes throw {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(85vw);
+            }
+        }
+
+        @keyframes hideBall {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes hidePins {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes collision {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: #f21515f7;">
+        Bowling Crew Animation
+    </h1>
+
+    <div class="container">
+
+        <div class="hitpins">
+            <img src="./assests/pins.png" height="200px" alt="Pins">
+        </div>
+
+        <div class="ball">
+            <img src="./assests/ball.png" height="100px" alt="Ball">
+        </div>
+
+        <div class="collide">
+            <img src="./assests/collision.png" height="200px" alt="Collision effect">
+        </div>
+
+    </div>
+</body>
+</html>
