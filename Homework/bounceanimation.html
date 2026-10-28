@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Bounce</title>
+</head>
+<style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            ball-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            height: 500px;
+            width:100%;
+            background-color: slategray;
+        }
+        .ball{
+            height:100px;
+            width:100px;
+            border-radius: 50%;
+            background-color: red;
+            animation: Ball 3s ease-in-out infinite;
+        }
+@keyframes Ball {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0, 360px);
+    }
+    30% {
+        transform: translate(200px, 120px);
+    }
+    40% {
+        transform: translate(250px, 360px);
+    }
+    50% {
+        transform: translate(400px, 240px);
+    }
+    60% {
+        transform: translate(450px, 360px);
+    }
+    70% {
+        transform: translate(500px, 360px);
+    }
+    100% {
+        transform: translate(600px, 0);
+    }
+
+        }
+</style>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color:" >BALL BOUNCE ANIMATION</h1>
+        <div class="ball">
+        </div>
+    </div>
+</body>
+</html>
