@@ -17,6 +17,17 @@ let box = document.getElementById("btn-event-helper");
             box.style.backgroundColor = "lightgreen";
         });
 
-        btn.addEventListener("contextmenu",(event) => {
-            
-        }
+        btn.addEventListener("contextmenu",function(e) {
+            e.preventDefault();
+            box.style.backgroundColor = "yellow";
+
+        })
+
+    let input = document.querySelector("input");
+    let str ="";
+    input.addEventListener("keydown",function(e){
+        console.log("event object" , e.key);
+        let p = document.querySelector("p");
+        str = str+e.key ;
+        p.textContent = str;
+    })
